@@ -13,7 +13,7 @@ public class Calculator
             throw new ArgumentException("Incorrect operator! Permitted operators are: +, -, *, /, ^, %");
         }
 
-        if (operation == '/' && arg2 == 0)
+        if ((operation == '/' || operation == '%') && arg2 == 0)
         {
             throw new Exception("Division by zero");
         }
