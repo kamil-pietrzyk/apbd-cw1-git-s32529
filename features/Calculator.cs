@@ -8,6 +8,11 @@ public class Calculator
 
     public Calculator(decimal arg1, decimal arg2, char operation)
     {
+        if (operation != '+' && operation != '-' && operation != '*' && operation != '/' && operation != '^' && operation != '%')
+        {
+            throw new ArgumentException("Incorrect operator! Permitted operators are: +, -, *, /, ^, %");
+        }
+
         if (operation == '/' && arg2 == 0)
         {
             throw new Exception("Division by zero");
