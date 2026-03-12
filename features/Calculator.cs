@@ -40,7 +40,7 @@ public class Calculator
             case '^':
                 return (decimal)Math.Pow((double)_arg1, (double)_arg2);
             case '%':
-                return _arg1 % _arg2;
+                return ((_arg1 % _arg2) + _arg2) % _arg2;
             default:
                 return 0;
         }
