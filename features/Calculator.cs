@@ -32,6 +32,8 @@ public class Calculator
                 return _arg1 * _arg2;
             case '/':
                 return _arg1 / _arg2;
+            case '^':
+                return (decimal)Math.Pow((double)_arg1, (double)_arg2);
             default:
                 return 0;
         }
