@@ -2,11 +2,11 @@
 
 public class Calculator
 {
-    private double _arg1;
-    private double _arg2;
-    private double _operation;
+    private decimal _arg1;
+    private decimal _arg2;
+    private decimal _operation;
 
-    public Calculator(double arg1, double arg2, char operation)
+    public Calculator(decimal arg1, decimal arg2, char operation)
     {
         if (operation == '/' && arg2 == 0)
         {
@@ -20,7 +20,7 @@ public class Calculator
         }
     }
     
-    public double Result() 
+    public decimal Result() 
     {
         switch (_operation)
         {

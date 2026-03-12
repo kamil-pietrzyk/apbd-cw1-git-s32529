@@ -8,9 +8,9 @@ Console.WriteLine("[number_1]");
 Console.WriteLine("[operation ('+', '-', '*', '/')]");
 Console.WriteLine("[number_2]");
 
-double arg1 = double.Parse(Console.ReadLine());
+decimal arg1 = decimal.Parse(Console.ReadLine());
 char operation = char.Parse(Console.ReadLine());
-double arg2 = double.Parse(Console.ReadLine());
+decimal arg2 = decimal.Parse(Console.ReadLine());
 
 Calculator calc = new Calculator(arg1, arg2, operation);
 
