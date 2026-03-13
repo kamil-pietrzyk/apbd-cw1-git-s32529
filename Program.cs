@@ -2,24 +2,45 @@
 
 using apbd_cw1_git_s32529.features;
 
-Console.WriteLine("Simple calculator!");
-Console.WriteLine("Select mode: 1 - Standard calculator, 2 - Advanced");
-char wybor = char.Parse(Console.ReadLine());
-if (wybor == '2')
-{
-    Console.WriteLine("Option coming soon..."); return;
+    Console.WriteLine("Simple calculator! Select mode:");
+    Console.WriteLine("1 - Standard calculator");
+    Console.WriteLine("2 - Advanced calculator");
+    char wybor = char.Parse(Console.ReadLine());
+    if (wybor == '2')
+    {
+        Console.WriteLine("Enter integers (each on a new line). Enter ‘END’ to finish.");
+        List<int> numbers = new List<int>();
+    
+        while (true)
+        {
+            string input = Console.ReadLine();
+            if (input.ToUpper() == "END") break;
+        
+            if (int.TryParse(input, out int number))
+            {
+                numbers.Add(number);
+            }
+            else
+            {
+                Console.WriteLine("This is not a valid integer. Please try again.");
+            }
+        }
+
+        int[] values = numbers.ToArray();
+        Console.WriteLine("The average is: " + Statistics.CalculateAverage(values));
+    }
+    else if (wybor == '1')
+    {
+        Console.WriteLine("Please enter your input in the following format:");
+        Console.WriteLine("[number_1]");
+        Console.WriteLine("[operation ('+', '-', '*', '/', '^', '%')]");
+        Console.WriteLine("[number_2]");
+
+        decimal arg1 = decimal.Parse(Console.ReadLine());
+        char operation = char.Parse(Console.ReadLine());
+        decimal arg2 = decimal.Parse(Console.ReadLine());
+
+        Calculator calc = new Calculator(arg1, arg2, operation);
+
+        Console.WriteLine("Twój wynik to: " + calc.Result());
 }
-
-
-Console.WriteLine("Please enter your input in the following format:");
-Console.WriteLine("[number_1]");
-Console.WriteLine("[operation ('+', '-', '*', '/', '^', '%')]");
-Console.WriteLine("[number_2]");
-
-decimal arg1 = decimal.Parse(Console.ReadLine());
-char operation = char.Parse(Console.ReadLine());
-decimal arg2 = decimal.Parse(Console.ReadLine());
-
-Calculator calc = new Calculator(arg1, arg2, operation);
-
-Console.WriteLine("Twój wynik to: " + calc.Result());
