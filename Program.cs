@@ -28,9 +28,27 @@ using apbd_cw1_git_s32529.features;
         }
 
         int[] values = numbers.ToArray();
-        Console.WriteLine("The average is: " + Statistics.CalculateAverage(values));
-        Console.WriteLine("The maximum value is: " + Statistics.CalculateMax(values));
-        Console.WriteLine("The minimum value is: " + Statistics.CalculateMin(values));
+        while (true)
+        {
+            Console.WriteLine("Select operation: a - Average, b - Max, c - Min");
+            char advChoice = char.Parse(Console.ReadLine());
+        
+            if (advChoice == 'a') { 
+                Console.WriteLine("The average is: " + Statistics.CalculateAverage(values)); 
+                break; 
+            }
+            else if (advChoice == 'b') { 
+                Console.WriteLine("The maximum value is: " + Statistics.CalculateMax(values)); 
+                break; 
+            }
+            else if (advChoice == 'c') { 
+                Console.WriteLine("The minimum value is: " + Statistics.CalculateMin(values)); 
+                break; 
+            }
+            else { 
+                Console.WriteLine("Invalid choice. Please try again."); 
+            }
+        }
     }
     else if (wybor == '1')
     {
