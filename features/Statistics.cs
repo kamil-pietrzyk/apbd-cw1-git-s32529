@@ -17,4 +17,12 @@ public static class Statistics
         foreach (int val in values) { if (val > max) max = val; }
         return max;
     }
+    
+    public static int CalculateMin(int[] values)
+    {
+        if (values == null || values.Length == 0) throw new ArgumentException("Brak danych");
+        int min = values[0];
+        foreach (int val in values) { if (val < min) min = val; }
+        return min;
+    }
 }
