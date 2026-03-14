@@ -29,8 +29,8 @@ using apbd_cw1_git_s32529.features;
 
         int[] values = numbers.ToArray();
         Console.WriteLine("The average is: " + Statistics.CalculateAverage(values));
-        Console.WriteLine("The maximum is: " + Statistics.CalculateMax(values));
-        Console.WriteLine("The minimum is: " + Statistics.CalculateMax(values));
+        Console.WriteLine("The maximum value is: " + Statistics.CalculateMax(values));
+        Console.WriteLine("The minimum value is: " + Statistics.CalculateMax(values));
     }
     else if (wybor == '1')
     {
