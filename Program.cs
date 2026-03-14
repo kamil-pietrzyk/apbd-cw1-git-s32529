@@ -30,18 +30,18 @@ using apbd_cw1_git_s32529.features;
         int[] values = numbers.ToArray();
         while (true)
         {
-            Console.WriteLine("Select operation: a - Average, b - Max, c - Min");
+            Console.WriteLine("Select operation: 1 - Average, 2 - Max, 3 - Min");
             char advChoice = char.Parse(Console.ReadLine());
         
-            if (advChoice == 'a') { 
+            if (advChoice == '1') { 
                 Console.WriteLine("The average is: " + Statistics.CalculateAverage(values)); 
                 break; 
             }
-            else if (advChoice == 'b') { 
+            else if (advChoice == '2') { 
                 Console.WriteLine("The maximum value is: " + Statistics.CalculateMax(values)); 
                 break; 
             }
-            else if (advChoice == 'c') { 
+            else if (advChoice == '3') { 
                 Console.WriteLine("The minimum value is: " + Statistics.CalculateMin(values)); 
                 break; 
             }
