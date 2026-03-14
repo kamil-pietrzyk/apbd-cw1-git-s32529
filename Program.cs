@@ -1,4 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
+// An app for APBD course
 
 using apbd_cw1_git_s32529.features;
 
